@@ -1,3 +1,43 @@
+# SVG to PNG Converter
+
+## Overview
+
+This is a web-based SVG to PNG Converter, allowing users to upload SVG files and convert them into PNG format for easy downloading. 
+
+## How to Use:
+
+1. Click on **"Click to fetch image or drop images here"** to upload your SVG files.
+2. Convert them to PNG format and download the images.
+
+## Features
+
+- **Upload**: Drag-and-drop or click to select your SVG files.
+- **Queue Management**: Manage a maximum of 20 files for conversion.
+- **Download All**: Once processed, download all converted PNG files with a single click.
+- **Clear Queue**: Option to clear the uploaded files.
+
+## File Upload Process
+
+- Users can upload up to 20 SVG files at a time.
+- SVG files will be listed with buttons to download or delete the files.
+- Processed files can be downloaded individually or all at once.
+
+## Error Handling
+
+- The tool will show an error if the maximum file upload limit is reached.
+- A "processing" status is shown for each file, followed by a "completed" notification once conversion is done.
+
+## Footer Information
+
+- **What is an SVG to PNG Converter?**: A tool to convert scalable vector graphics (SVG) to raster images (PNG).
+- **Website Year**: 2024
+- **Version**: 1.0.0
+
+## Code & Functionality Breakdown
+
+### HTML Structure
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -312,7 +352,6 @@
             }, 1500);
         }
 
-        // Modal for warning before clearing queue
         document.getElementById('clearQueue').addEventListener('click', () => {
             const modal = new bootstrap.Modal(document.getElementById('backWarningModal'));
             modal.show();
